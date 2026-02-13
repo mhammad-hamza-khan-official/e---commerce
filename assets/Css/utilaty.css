@@ -1,3 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
 /* Padding */
 .p-4  { padding: 4px; }
 .p-8  { padding: 8px; }
@@ -29,6 +36,16 @@
 .justify-between { justify-content: space-between; }
 
 .align-center { align-items: center; }
+.self-center{
+    align-self: center;
+}
+.self-end{
+    align-self: end;
+}
+
+.self-start{
+    align-self: flex-start;
+}
 .flex-wrap { flex-wrap: wrap; }
 
 .text-center { text-align: center; }

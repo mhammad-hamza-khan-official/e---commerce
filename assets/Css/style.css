@@ -1,7 +1,4 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
   color: var(--text-primary);
 }
 
@@ -56,7 +53,6 @@ body {
   background: var(--bg-body);
   color: var(--text-primary);
   font-family: "Inter", sans-serif;
-  scroll-behavior: smooth;
 }
 
 html,
@@ -101,6 +97,110 @@ button:hover {
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-soft);
 }
+
+/* Login popPop */
+
+.login-popPop{
+  position: absolute;
+  background: #000000cb;
+  font-size: var(--font-size);
+  z-index: 99999999;
+  inset: 0;
+  display: none;
+}
+
+.login-popPop .heading{
+  display: grid;
+  grid-template-columns: 3fr 0.5fr;
+  align-items: center;
+}
+
+.login-popPop img{
+  cursor: pointer;
+}
+
+.login-popPop .login-card{
+  height: 60vh;
+  width: 500px;
+  background:var(--bg-card);
+  border-radius: 20px;
+}
+
+.login-popPop .login-card .container{
+  gap: 35px ;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.login-popPop .login-card h1{
+  font-size: 0.6em;
+}
+
+.login-popPop .login-card h3{
+  font-size: 0.4em;
+}
+
+.login-popPop .login-card .btn{
+  border: 1px solid var(--bg-dark);
+  width: 80%;
+  border-radius: 20px;
+  gap: 10px;
+  cursor: pointer;
+  box-shadow: var(--shadow-soft);
+  background: var(--bg-card);
+}
+
+.login-popPop .login-card .btn a{
+  width: 100%;
+  height: 100%;
+  gap: 10px;
+}
+
+.login-popPop .login-card .btn:hover{
+  background-color: rgb(233, 223, 223);
+}
+
+.login-popPop .login-card .btn h3:hover{
+  color: var(--accent-hover);
+}
+
+.login-popPop .login-card p{
+  font-size: 0.4em;
+}
+
+.login-popPop .or {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+  color: var(--text-secondary);
+}
+
+.login-popPop .or::before,
+.login-popPop .or::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  width: 100px;
+  background: var(--bg-dark);
+}
+
+.login-popPop .or span {
+  padding: 0 12px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* .login-popPop .login-card p::before{
+  content: '';
+  width: 80px;
+  height: 1px;
+  background-origin: var(--bg-dark);
+} */
+
+
 
 /* --- header  */
 header nav {

@@ -5,12 +5,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./assets/Css/style.css" />
     <link rel="stylesheet" href="./assets/Css/utilaty.css" />
+    <link rel="stylesheet" href="./assets/Css/style.css" />
 
 </head>
 
 <body>
+    <!-- login pop -->
+    <div class="login-popPop  justify-center align-center justify-center"
+    id="login-pop">
+        <div class="login-card d-flex flex-column  align-center justify-center">
+            <div class="container d-flex flex-column justify-center align-center">
+                <div class="heading ">
+                    <h1>Login</h1>
+                    <img src="" alt="cross" id="cross">
+                </div>
+                <div class="user d-flex  btn justify-center align-center">
+                    <a href="#" class="d-flex align-center justify-center">
+                    <div class="icon">
+                        <img src="./assets/icon/User.svg" alt="">
+                    </div>
+                        <h3>Login as User</h3>
+                    </a>
+                </div>
+                <div class="or">
+                    <span>OR</span>
+                </div>
+                <div class="admin btn d-flex justify-center align-center">
+                    <a href="#" class="d-flex align-center justify-center">
+                     <div class="icon">
+                        <img src="./assets/icon/Admin.svg" alt="">
+                     </div>
+                        <h3>Login as Admin</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ------  -->
     <header class="d-flex align-center">
         <nav class="d-flex w-100 align-center justify-between flex-wrap ">
             <!-- logo -->
@@ -28,17 +60,16 @@
             </div>
             <!-- scearch and login -->
             <div class="search-login">
-                    <div class="search">
-                        <img src="./assets/icon/search.svg" alt="">
-                        <input type="search" name="" id="" placeholder="Scearch">
-                    </div>
+                <div class="search">
+                    <img src="./assets/icon/search.svg" alt="">
+                    <input type="search" name="" id="" placeholder="Scearch">
+                </div>
                 <div class="login-btn d-flex align-center">
-                    <button type="button">Login</button>
+                    <button type="button" id="pop-login-btn">Login</button>
                     <!-- search -->
-                     <img src="./assets/icon/search.svg" alt="" class="search-icon">
+                    <img src="./assets/icon/search.svg" alt="" class="search-icon">
                     <!-- hamberger -->
-                    <img src="./assets/icon/hamberger.svg" alt=""
-                    class="hamberger-icon">
+                    <img src="./assets/icon/hamberger.svg" alt="" class="hamberger-icon">
                 </div>
             </div>
         </nav>
@@ -326,6 +357,6 @@
             </form>
         </div>
     </div>
+    <script src="./JavaScript/user.js"></script>
 </body>
-
 </html>

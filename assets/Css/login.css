@@ -1,0 +1,246 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* ===== Base Colors ===== */
+  --login-bg: #f7f7f7;
+  --login-card-bg: #ffffff;
+
+  /* ===== Text ===== */
+  --login-text-primary: #111111;
+  --login-text-secondary: #666666;
+  --login-text-invert: #ffffff;
+
+  /* ===== Input Fields ===== */
+  --login-input-bg: #f8f8f8;
+  --login-input-border: #413e3e;
+  --login-input-focus: #000000;
+  --login-placeholder: #999999;
+
+  /* ===== Buttons ===== */
+  --login-btn-bg: #000000;
+  --login-btn-hover: #333333;
+  --login-btn-text: #ffffff;
+ 
+  /* ===== Border & Divider ===== */
+  --login-border: #e5e5e5;
+  --login-or-line: #dddddd;
+
+  /* ===== Error / Success ===== */
+  --login-error: #e63946;
+  --login-success: #2a9d8f;
+
+  /* ===== Shadow ===== */
+  --login-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+  /* ===== Radius ===== */
+  --login-radius: 10px;
+
+  --font-size: 40px;
+
+}
+
+
+.container{
+  background-color: var(--login-bg);
+  width:100vw;
+  height: 100vh;
+  font-size: var(--font-size);
+}
+
+.left-side{
+  height: 100%;
+  background-color: var(--login-bg);
+  position: relative;
+}
+
+ 
+
+.back a {
+  font-size: 0.5em;
+}
+
+.left-side .btn{
+  border: 1px solid black;
+  font-size: 0.5em;
+  gap: 10px;
+  padding: 6px 0px;
+  width: 90%;
+  border-radius: 21px ;
+  text-transform: capitalize;
+}
+
+.left-side .btn > p{
+  font-size: 0.7em;
+}
+
+.left-side .btn:hover{
+  background: rgb(230, 221, 221);
+}
+
+.left-side .btn{
+  position: relative;
+}
+
+.left-side .btn a{
+  position: absolute;
+  inset: 0;
+}
+
+.right-side{
+  height: 100%;
+  background: rgb(99, 99, 101);
+  overflow: hidden;
+  position: relative;
+}
+
+.right-side .overlay{
+  position: absolute;
+  inset: 0;
+  background: #00000067;
+  z-index: 40;
+}
+
+form input{
+  background-color: var(--login-input-bg);
+  border: 1px solid var(--login-input-border);
+  height: 35px;
+  border-radius: 6px;
+}
+
+form input::placeholder{
+  clear: var(--login-placeholder);
+}
+
+form input:focus{
+  border:1px solid var(--login-input-focus);
+}
+
+.left-side h1{
+  font-size: 0.5em;
+}
+
+form{
+  font-size: 0.4em;
+  gap: 25px;
+}
+
+form input[type="submit"]{
+  background-color: var(--login-btn-bg);
+  color: var(--login-btn-text);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border-radius: 8px;
+  width: 100%;
+}
+
+form input[type="submit"]:hover{
+  background-color: var(--login-btn-hover);
+}
+
+.login-card{
+  gap: 30px;
+}
+
+ .or {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+  color: var(--text-secondary);
+}
+
+ .or::before,
+ .or::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  width: 100px;
+  background: black;
+}
+
+.or span {
+  padding: 0 12px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.back{
+  font-size: 0.7em;
+  
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+          .login-card{
+  width: 80%;
+  }
+
+      .right-side{
+    width: 0%;
+  }
+  .left-side{
+    width: 100%;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+        .login-card{
+  width: 80%;
+  }
+    .right-side{
+    width: 0%;
+  }
+  .left-side{
+    width: 100%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+      .login-card{
+  width: 55%;
+  }
+
+  .right-side{
+    width: 0%;
+  }
+  .left-side{
+    width: 100%;
+  }
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .login-card{
+  width: 70%;
+  }
+
+    .right-side{
+    width: 50%;
+  }
+  .left-side{
+    width: 50%;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+      .login-card{
+  width: 55%;
+  }
+
+  .right-side{
+    width: 50%;
+  }
+  .left-side{
+    width: 50%;
+  }
+}
