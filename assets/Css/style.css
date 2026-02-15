@@ -38,6 +38,7 @@
   /* Borders & Shadows */
   --border-color: #e5e5e5;
   --shadow-soft: 0 7px 20px 5px rgba(0, 0, 0, 0.08);
+  --sharp-shadow:  0px 3px 16px #0000006e;
 
   --accent: #c9a24d;
   --accent-hover: #b8923f;
@@ -402,15 +403,15 @@ header .login-btn .search-icon {
 }
 
 .products .card-item {
-  border: 1px solid var(--color-black);
   height: 400px;
   width: 317px;
-  padding: 5px;
+  padding: 8px;
   border-radius: 10px;
   display: grid;
   grid-template-rows: 3fr 1fr;
   background: var(--bg-card);
-  /* box-shadow: var(--shadow-soft); */
+  box-shadow: var(--sharp-shadow);
+  border-radius: 10px;
 }
 
 .products .card-item .img {
@@ -422,9 +423,17 @@ header .login-btn .search-icon {
   inset: 0;
 }
 
-.products .card-item .overlay:hover {
-  background: #00000052;
-  cursor: pointer;
+.add-to-card button{
+  background-color: var(--bg-dark) !important;
+  color: var(--color-white) !important;
+  width: 100%;
+  font-size: 0.4em ;
+  padding: 8px 0;
+  border-radius: 8px;
+}
+
+.add-to-card button:hover{
+  background-color:#333333 !important;
 }
 
 .card-item .text {
@@ -480,8 +489,8 @@ header .login-btn .search-icon {
   font-size: var(--font-size);
   background-color: var(--bg-card);
   overflow: hidden;
-  border-top: 1px solid var(--bg-dark);
   margin-top: 5px;
+  padding-top: 69px;
 }
 
 .footer .contact form {

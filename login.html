@@ -8,18 +8,41 @@
     <link rel="stylesheet" href="./assets/Css/utilaty.css">
 </head>
 <body>
+    <div id="alert">
+        <p id="wrong">Wrong Cradential</p>
+        <p id="empty">Fill the Feilds</p>
+    </div>
     <div class="container d-flex">
         <!-- right login card -->
         <div class="left-side d-flex justify-center align-center flex-column">
-            <div class="back self-start">
-                <a href="#">
-                    <p>
-                        Home
-                    </p>
-                </a>
-            </div>
             <div class="login-card d-flex flex-column" id="Admin">
                 <h1>Login as Admin</h1>
+                <form action="" class="d-flex flex-column">
+                    Name
+                    <input type="text" name="" id="admin-name" required>
+                    Email
+                    <input type="email" name="" id="admin-email" required>
+                    Phone number
+                    <input type="password" name="" id="admin-password" required>
+                    <input type="submit" value="Submit" id="submit-admin">
+                </form>
+                <div class="or">
+                    <span>OR</span>
+                </div>
+                <div class="btn d-flex align-center justify-center" id="User-btn">
+                    <a href="#">
+                    </a>    
+    
+                    <div class="icon"><img src="./assets/icon/User.svg" alt="">
+                    </div>
+                    <p>
+                        Login As User
+                    </p>
+                </div>
+            </div>
+
+            <div class="login-card d-flex flex-column" id="User">
+                <h1>Login as User</h1>
                 <form action="" method="post" class="d-flex flex-column">
                     Name
                     <input type="text" name="" id="" required>
@@ -32,14 +55,13 @@
                 <div class="or">
                     <span>OR</span>
                 </div>
-                <div class="btn d-flex align-center justify-center">
+                <div class="btn d-flex align-center justify-center" id="Admin-btn">
                     <a href="#">
                     </a>    
-    
                     <div class="icon"><img src="./assets/icon/User.svg" alt="">
                     </div>
                     <p>
-                        Login As User
+                        Login As Admin
                     </p>
                 </div>
             </div>
@@ -49,5 +71,6 @@
             <div class="overlay"></div>
         </div>
     </div>
+    <script src="./JavaScript/audh.js"></script>
 </body>
 </html>

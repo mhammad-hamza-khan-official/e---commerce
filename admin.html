@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="./assets/Css/admin.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <p>Shop.co</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Listed</a></li>
+                <li><a href="#">Info</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="sidebar">
+            <ul>
+                <li>Dashboard</li>
+                <li>Product</li>
+                <li>Shopping</li>
+                <li>Analytics</li>
+            </ul>
+        </div>
+
+        <main>
+            <div class="dashboard">
+                <h1>Dashboard</h1>
+
+                <!-- Add Product Section -->
+                <div class="add-product">
+                    <h2>Add Product</h2>
+
+                    <!-- Checkbox + Label Toggle -->
+                    <input type="checkbox" id="ADD">
+                    <label for="ADD" class="add-product-btn">Add Product</label>
+
+                    <!-- Hidden Inputs -->
+                    <div class="input-contain">
+                        <div class="name">
+                            <span>Product Name</span>
+                            <input type="text" placeholder="Enter Product Name" id="pName">
+                        </div>
+
+                        <div class="price">
+                            <span>Price</span>
+                            <input type="number" placeholder="Enter Price" id="pPrice">
+                        </div>
+                        <div class="rating">
+                            <span>Rating</span>
+                            <input type="text"  maxlength="1" placeholder="Enter 1 digit"
+                            id="pRating">
+                            <p      id="errorRating" class="error">Rating must be less then 5</p>
+
+                        </div>
+
+                        <div class="img">
+                            <span>Image</span>
+                            <input type="file" id="fileInput pImage" accept=".jpg,.jpeg,.png,.gif" hidden >
+                            <label for="fileInput pImage">Upload Image</label>
+                            <button id="pDone">Done</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-container">
+                    <div class="heading">
+                        <h1>Products</h1>
+                    </div>
+                    <div class="container" id="overflow-product">
+
+                                <!-- item -->
+                                  <div class="card-item  "> 
+                                    <div class="img d-flex justify-center ">
+                                        <div class="overlay"></div>
+                                        <img src="./assets/image/black-t-shirt-mockup-isolated-on-transparent-background-ai-generative-png.png"
+                                            alt="">
+                                    </div>
+                                    <div class="text">
+                                        <div class="title">
+                                            <p>T-shirt with Tape Details</p>
+                                        </div>
+                                        <div class="rating">
+                                            <p>
+                                                ⭐⭐⭐⭐
+                                            </p>
+                                        </div>
+                                        <div class="price">
+                                            120$
+                                        </div>
+                                        <div class="add-to-card">
+                                            <button>Add To Card</button>
+                                        </div>
+                                    </div>
+                                </div>  
+                           
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="./JavaScript/admin.js"></script>
+</body>
+</html>

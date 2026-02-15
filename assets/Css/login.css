@@ -57,12 +57,6 @@
   position: relative;
 }
 
- 
-
-.back a {
-  font-size: 0.5em;
-}
-
 .left-side .btn{
   border: 1px solid black;
   font-size: 0.5em;
@@ -109,6 +103,7 @@ form input{
   border: 1px solid var(--login-input-border);
   height: 35px;
   border-radius: 6px;
+  padding: 5px 10px;
 }
 
 form input::placeholder{
@@ -136,6 +131,7 @@ form input[type="submit"]{
   letter-spacing: 0.5px;
   border-radius: 8px;
   width: 100%;
+  cursor: pointer;
 }
 
 form input[type="submit"]:hover{
@@ -169,11 +165,41 @@ form input[type="submit"]:hover{
   font-weight: 500;
 }
 
-.back{
-  font-size: 0.7em;
-  
+#Admin{
+  display: none;
 }
 
+#User{
+  display: none;
+}
+
+#alert{
+  /* height: 40px; */
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  background-color: var(--login-error);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  font-size: var(--font-size);
+}
+
+#alert p{
+  color: white;
+  font-weight: 700;
+  font-size: 0.4em;
+  letter-spacing: 0.4px;
+  margin: 5px 0px;
+}
+
+#wrong{
+  display: none;
+}
+
+#empty{
+  display: none;
+}
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
