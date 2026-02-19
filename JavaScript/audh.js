@@ -7,7 +7,8 @@ const ADMIN = {
 const userCard = document.getElementById("User");
 const adminCard = document.getElementById("Admin");
 
-let loginType = localStorage.getItem("loginType", "user");
+let loginType = localStorage.getItem("loginType") || "user";
+
 let userBtn = document.getElementById("User-btn");
 let adminBtn = document.getElementById("Admin-btn");
 //Admin input feild
@@ -21,7 +22,6 @@ const alertEmpty = document.getElementById("empty");
 const submitAdmin = document.getElementById("submit-admin");
 
 const Forms = document.getElementsByTagName("form");
-console.log(Forms);
 
 Forms[0].addEventListener("click", (e) => {
   if (!Forms[0].checkValidity()) {
@@ -60,19 +60,41 @@ submitAdmin.addEventListener("click", () => {
   if (
     Name === ADMIN.name &&
     adminEmail.value === ADMIN.email &&
-    adminPassword.value &&
+    adminPassword.value ===
     ADMIN.password
   ) {
+    //go on admin page
     window.location.href = "admin.html";
+    localStorage.setItem("ADMIN","true")
   } else if (
     adminName.value === "" &&
     adminEmail.value === "" &&
     adminPassword.value === ""
   ) {
+    //Alerts
     alertEmpty.style.display = "block";
     alertWrong.style.display = "none";
-}else{
+    localStorage.setItem("ADMIN","false")
+  }else{
+    //Alerts
       alertEmpty.style.display = "none";
       alertWrong.style.display = "block";
+      localStorage.setItem("ADMIN","false")
   }
 });
+
+const input = document.getElementsByTagName("input")
+
+//  
+
+console.log(input);
+
+Array.from(input).forEach((e) => {
+  e.addEventListener("input",(e) => {
+          alertEmpty.style.display = "none";
+      alertWrong.style.display = "none";
+  }
+  )
+})
+
+

@@ -30,7 +30,8 @@
   --login-or-line: #dddddd;
 
   /* ===== Error / Success ===== */
-  --login-error: #e63946;
+  /* --login-error: #e63946; */
+  --login-error:#9d261d;
   --login-success: #2a9d8f;
 
   /* ===== Shadow ===== */
